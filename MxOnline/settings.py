@@ -1,3 +1,4 @@
+# coding:utf-8
 """
 Django settings for MxOnline project.
 
@@ -52,6 +53,7 @@ INSTALLED_APPS = [
     'operation',
     'xadmin',
     'crispy_forms',
+    'captcha',
 ]
 AUTH_USER_MODEL = "users.UserProfile"
 
@@ -137,6 +139,13 @@ USE_TZ = False
 # https://docs.djangoproject.com/en/1.11/howto/static-files/
 
 STATIC_URL = '/static/'
-STATICFILES_DIR = (
-    os.path.join(BASE_DIR, "static")
+STATICFILES_DIRS = (
+    os.path.join(BASE_DIR, "static"),
 )
+
+EMAIL_HOST = "smtp.163.com"
+EMAIL_PORT = 25
+EMAIL_HOST_USER = "zhmongol@163.com"
+EMAIL_HOST_PASSWORD = "caonima123"
+EMAIL_USE_TLS = False
+EMAIL_FROM = "zhmongol@163.com"
